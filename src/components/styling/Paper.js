@@ -1,0 +1,56 @@
+import React from 'react';
+import clsx from 'clsx';
+import PropTypes from 'prop-types';
+import MuiPaper from '@material-ui/core/Paper';
+import { capitalize } from '@material-ui/core/utils';
+import { withStyles } from '@material-ui/core/styles';
+
+const styles = theme => ({
+  backgroundLight: {
+    backgroundColor: theme.palette.primary,
+  },
+  backgroundMain: {
+    backgroundColor: theme.palette.primary.light,
+  },
+  backgroundDark: {
+    backgroundColor: theme.palette.primary.light,
+  },
+  padding: {
+    padding: theme.spacing(1),
+    
+  },
+});
+
+function Paper(props) {
+  const { background = 'light',onToggleDark, classes, className, padding = false, ...other } = props;
+  
+  return (
+    <div>
+    
+    <MuiPaper
+    
+      elevation={0}
+      square
+     
+      className={clsx(
+        classes[`background${capitalize(background)}`],
+        {
+          [classes.padding]: padding,
+        },
+        className,
+      )}
+      {...other}
+    />
+    
+    </div>
+  );
+}
+
+Paper.propTypes = {
+  background: PropTypes.oneOf(['light', 'main', 'dark']),
+  classes: PropTypes.object.isRequired,
+  className: PropTypes.string,
+  padding: PropTypes.bool,
+};
+
+export default withStyles(styles)(Paper);

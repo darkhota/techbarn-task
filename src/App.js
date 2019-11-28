@@ -1,25 +1,31 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
+
+import LandingPage from './components/pages/LandingPage';
+import CheckOut from './components/pages/CheckOut';
+import CheckIn from './components/pages/CheckIn';
+import Capture from './components/pages/Capture';
+import SelectHost from './components/pages/SelectHost';
+import Terms from './components/pages/Terms';
 
 function App() {
   return (
-    <div className="App">
+    <Router>
+      <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+      <Route exact path = "/" render={props => (
+     <React.Fragment><LandingPage />
+     </React.Fragment>)}/>
+     <Route path = "/checkIn" component={CheckIn} />
+     <Route path = "/capture" component={Capture} />
+     <Route path = "/checkout" component={CheckOut} />
+     <Route path = "/selecthost" component={SelectHost} />
+     <Route path = "/terms" component={Terms} />
+    
+       
       </header>
     </div>
+    </Router>
   );
 }
 
