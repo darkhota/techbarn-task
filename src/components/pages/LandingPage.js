@@ -63,7 +63,7 @@ export default function LandingPage () {
 <Container fixed>
 <GridContainer>
             <GridItem xs={12} sm={12} md={6}>
-            <Typography style ={theme.text}  variant="h1">
+            <Typography style ={theme.text}  variant="h1" color = "textPrimary">
             
             
            
