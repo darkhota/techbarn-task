@@ -9,6 +9,8 @@ import { makeStyles } from '@material-ui/core/styles';
 import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button';
 import { Link } from 'react-router-dom';
+import useMediaQuery from '@material-ui/core/useMediaQuery';
+
 const linkStyle = {
     color: '#fff',
     textDecoration: 'none'
@@ -19,6 +21,7 @@ const useStyles = makeStyles(theme => ({
       '& > *': {
         margin: theme.spacing(1),
       },
+     flexgrow: 1,
     },
     bigAvatar: {
       width: 750,
@@ -45,7 +48,9 @@ const theme = createMuiTheme({
     });
 
 export default function LandingPage () {
-   
+   // const matches = useMediaQuery('(min-width:600px)');
+
+    
     const classes = useStyles();
     
         
@@ -71,15 +76,14 @@ financial services through our specialized subsidiaries
 <Button variant="contained" color="secondary">
 <Link style={linkStyle} to="/checkin"> CHECK IN</Link></Button>
 </GridItem>
-<GridItem xs={12} sm={12} md={6}>
 
-<Avatar alt="Remy Sharp" src="tech.jpg"className={classes.bigAvatar} />
-</GridItem>
 </GridContainer>
 </Container>
 </div>
 </MuiThemeProvider>
+
     );
+  //  return <span>{`(min-width:600px) matches: ${matches}`}</span>;
 }
 
   

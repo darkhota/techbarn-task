@@ -18,7 +18,7 @@ const styles = theme => ({
     [theme.breakpoints.up('md')]: {
       padding: theme.spacing(0, -21),
     },
-    width:600,
+    
   },
 });
 
