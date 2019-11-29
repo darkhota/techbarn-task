@@ -31,7 +31,7 @@ const useStyles = makeStyles(theme => ({
 const theme = createMuiTheme({
     palette: {
         primary: { main: '#ffffff' },
-        secondary: { main: '#2671b8' },
+        secondary: { main: '#808080' },
     },
     text:{
         marginTop: 196,
@@ -69,7 +69,7 @@ export default function LandingPage () {
            
 Welcome!
 </Typography>
-<Typography style ={theme.text2}  variant="h6" >
+<Typography style ={theme.text2}  variant="h6" color = "secondary">
 We are an Investment company, set up to provide innovative and accessive 
 financial services through our specialized subsidiaries
 </Typography>
