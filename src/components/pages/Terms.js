@@ -15,7 +15,7 @@ import GridContainer from "../styling/GridContainer.js";
 import GridItem from "../styling/Griditem";
 import { Link } from 'react-router-dom';
 const linkStyle = {
-    color: '#fff',
+    color: '#2e7d32',
     textDecoration: 'none'
   }
 const useStyles = makeStyles(theme => ({
@@ -42,11 +42,15 @@ const useStyles = makeStyles(theme => ({
         display: 'flex',
         flexWrap: 'wrap',
       },
+      button:{
+        background: 'linear-gradient(to right, #336600 37%, #336699 120%)',
+
+    },
   }));
 
   const theme = createMuiTheme({
     palette: {
-        primary: { main: '#ffffff' },
+        primary: { main: '#2e7d32' },
         secondary: { main: '#2671b8' },
     },
     text:{
@@ -71,13 +75,14 @@ const useStyles = makeStyles(theme => ({
     const bull = <span className={classes.bullet}>•</span>;
 
     return (
-        
+        <MuiThemeProvider theme={theme}>
+
           <AppForm>
 <Container component="main" maxWidth="xs"> 
 
       <CssBaseline />
       <div>
-            <Typography variant="h3" gutterBottom >
+            <Typography variant="h3" gutterBottom tyle ={theme.text} color= "secondary">
              Techbarn NDA
             </Typography>
             <Typography variant="subtitle" component="h2">
@@ -122,7 +127,7 @@ const useStyles = makeStyles(theme => ({
           <Button
             type="submit"
            
-            variant="contained"
+            variant="outlined"
             color="primary"
             
           >
@@ -137,7 +142,7 @@ const useStyles = makeStyles(theme => ({
             style ={theme.button2}
             variant="contained"
             color="primary"
-            
+            className={classes.button}
           >
            I agree
             
@@ -154,6 +159,6 @@ const useStyles = makeStyles(theme => ({
        </Box>
      </Container>
      </AppForm>
-         
+         </MuiThemeProvider>
       );
     }

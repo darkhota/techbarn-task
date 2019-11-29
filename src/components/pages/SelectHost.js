@@ -16,7 +16,7 @@ import GridItem from "../styling/Griditem";
 import MenuItem from '@material-ui/core/MenuItem';
 import { Link } from 'react-router-dom';
 const linkStyle = {
-    color: '#fff',
+    color: '#2e7d32',
     textDecoration: 'none'
   }
 const currencies = [
@@ -54,6 +54,17 @@ const useStyles = makeStyles(theme => ({
         width: 200,
       },
   }));
+  const theme = createMuiTheme({
+    palette: {
+        primary: { main: '#2e7d32' },
+        secondary: { main: '#006699' },
+    },
+    text:{
+     
+      fontWeight: "bold",
+     
+    },
+  });
 
   export default function Capture() {
     const classes = useStyles();
@@ -63,13 +74,13 @@ const useStyles = makeStyles(theme => ({
       setCurrency(event.target.value);
     };
     return (
-        
+      <MuiThemeProvider theme={theme}>
           <AppForm>
 <Container component="main" maxWidth="xs"> 
 
       <CssBaseline />
       <div>
-            <Typography variant="h4" gutterBottom>
+            <Typography variant="h4" gutterBottom style ={theme.text} color= "secondary">
              Select Host
             </Typography>
             <Typography variant="subtitle1" component="h2">
@@ -162,7 +173,7 @@ const useStyles = makeStyles(theme => ({
           <Button
             type="submit"
             
-            variant="contained"
+            variant="outlined"
             color="primary"
             
           >
@@ -175,7 +186,7 @@ const useStyles = makeStyles(theme => ({
           <Button
             type="submit"
             
-            variant="contained"
+            variant="outlined"
             color="primary"
             
           >
@@ -194,6 +205,6 @@ const useStyles = makeStyles(theme => ({
        </Box>
      </Container>
      </AppForm>
-         
+        </MuiThemeProvider> 
       );
     }

@@ -18,6 +18,7 @@ const linkStyle = {
     color: '#fff',
     textDecoration: 'none'
   }
+  
 const useStyles = makeStyles(theme => ({
     card: {
       minWidth: 275,
@@ -42,20 +43,35 @@ const useStyles = makeStyles(theme => ({
         display: 'flex',
         flexWrap: 'wrap',
       },
+      button:{
+        background: 'linear-gradient(to right, #336600 37%, #336699 120%)',
+
+    },
   }));
+  const theme = createMuiTheme({
+    palette: {
+        primary: { main: '#ffffff' },
+        secondary: { main: '#006699' },
+    },
+    text:{
+     
+      fontWeight: "bold",
+     
+    },
+  });
 
   export default function CheckIn() {
     const classes = useStyles();
     const bull = <span className={classes.bullet}>•</span>;
 
     return (
-        
+      <MuiThemeProvider theme={theme}>
           <AppForm>
 <Container component="main" maxWidth="xs"> 
 
       <CssBaseline />
       <div>
-            <Typography variant="h4" gutterBottom>
+            <Typography variant="h4" gutterBottom color= "secondary" style ={theme.text} >
               Welcome To TechBarn
             </Typography>
             <Typography variant="subtitle1" component="h2">
@@ -158,7 +174,7 @@ const useStyles = makeStyles(theme => ({
             
             variant="contained"
             color="primary"
-            
+            className={classes.button}
           >
             <Link style={linkStyle} to="/capture">check-in</Link>
             
@@ -173,6 +189,6 @@ const useStyles = makeStyles(theme => ({
        </Box>
      </Container>
      </AppForm>
-         
+        </MuiThemeProvider> 
       );
     }

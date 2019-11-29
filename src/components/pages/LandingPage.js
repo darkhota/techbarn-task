@@ -10,6 +10,7 @@ import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button';
 import { Link } from 'react-router-dom';
 import useMediaQuery from '@material-ui/core/useMediaQuery';
+import Box from '@material-ui/core/Box';
 
 const linkStyle = {
     color: '#fff',
@@ -22,6 +23,11 @@ const useStyles = makeStyles(theme => ({
         margin: theme.spacing(1),
       },
      flexgrow: 1,
+ 
+    },
+    button:{
+        background: 'linear-gradient(to right, #336600 37%, #336699 120%)',
+
     },
     bigAvatar: {
       width: 750,
@@ -31,12 +37,14 @@ const useStyles = makeStyles(theme => ({
 const theme = createMuiTheme({
     palette: {
         primary: { main: '#ffffff' },
-        secondary: { main: '#808080' },
+        secondary: { main: '#008f11' },
     },
     text:{
         marginTop: 196,
         marginBottom: 100,
         fontSize: 30,
+        fontWeight: "bold",
+       
       },
       text2:{
         marginTop: 0,
@@ -63,17 +71,18 @@ export default function LandingPage () {
 <Container fixed>
 <GridContainer>
             <GridItem xs={12} sm={12} md={6}>
-            <Typography style ={theme.text}  variant="h1" color = "textPrimary">
+            <Typography component="div" style ={theme.text}  variant="h1" color = "textPrimary">
             
             
-           
+            <Box fontWeight="fontWeightBold" m={1}>          
 Welcome!
+</Box>
 </Typography>
-<Typography style ={theme.text2}  variant="h6" color = "secondary">
+<Typography style ={theme.text2}  variant="h6" color = "textPrimary">
 We are an Investment company, set up to provide innovative and accessive 
 financial services through our specialized subsidiaries
 </Typography>
-<Button variant="contained" color="secondary">
+<Button variant="contained" color="secondary" className={classes.button}>
 <Link style={linkStyle} to="/checkin"> CHECK IN</Link></Button>
 </GridItem>
 
