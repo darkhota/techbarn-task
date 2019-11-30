@@ -82,8 +82,8 @@ const useStyles = makeStyles(theme => ({
       },
       button2:{
         marginTop: -250,
-        marginLeft: 120,
-        paddingRight: 25,
+        //marginLeft: 120,
+       // paddingRight: 25,
         
       },
       button3:{
@@ -138,11 +138,11 @@ const useStyles = makeStyles(theme => ({
           </Box>
           </Box>
           </div>
-          <Box display="flex" justifyContent="flex-end" m={0} p={1} bgcolor="background.paper">
+          <Box display="flex" justifyContent="flex-end" m={1} p={1} bgcolor="background.paper">
           <Box p={1}>
           <Button
             type="submit"
-          // style ={theme.button2}
+         style ={theme.button2}
             variant="contained"
             
             className={classes.button}
