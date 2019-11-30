@@ -142,7 +142,7 @@ const useStyles = makeStyles(theme => ({
           <Box p={1}>
           <Button
             type="submit"
-           style ={theme.button2}
+          // style ={theme.button2}
             variant="contained"
             
             className={classes.button}
@@ -155,7 +155,7 @@ const useStyles = makeStyles(theme => ({
           </Box>
           
           <div>
-          <Grid container spacing={1}>
+          <Grid container spacing={5}>
             <Grid item xs={4} sm={6} md={6}>
           <Button
             type="submit"
