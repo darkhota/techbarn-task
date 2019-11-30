@@ -14,6 +14,8 @@ import Box from '@material-ui/core/Box';
 import GridContainer from "../styling/GridContainer.js";
 import GridItem from "../styling/Griditem";
 import { Link } from 'react-router-dom';
+import Grid from '@material-ui/core/Grid';
+
 const linkStyle = {
     color: '#2e7d32',
     textDecoration: 'none'
@@ -122,8 +124,8 @@ const useStyles = makeStyles(theme => ({
           </GridContainer>
           
           <div>
-          <GridContainer spacing={3}>
-            <GridItem xs={12} sm={6} md={6}>
+          <Grid container spacing={3}>
+            <Grid item xs={4} sm={6} md={6}>
           <Button
             type="submit"
            
@@ -134,9 +136,9 @@ const useStyles = makeStyles(theme => ({
             <Link style={linkStyle} to="/selecthost">Previous</Link>
             
           </Button >
-          </GridItem>
+          </Grid>
           
-            <GridItem xs={12} sm={6} md={6}>
+            <Grid item xs={4} sm={6} md={6}>
           <Button
             type="submit"
             style ={theme.button2}
@@ -147,8 +149,8 @@ const useStyles = makeStyles(theme => ({
            I agree
             
           </Button>
-          </GridItem>
-          </GridContainer>
+          </Grid >
+          </Grid>
              </div>
         </form>
         

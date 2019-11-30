@@ -14,11 +14,17 @@ import Box from '@material-ui/core/Box';
 import GridContainer from "../styling/GridContainer.js";
 import GridItem from "../styling/Griditem";
 import { Link } from 'react-router-dom';
+import Paper from '@material-ui/core/Paper';
+import Grid from '@material-ui/core/Grid';
+
 const linkStyle = {
     color: '#2e7d32',
     textDecoration: 'none'
   }
 const useStyles = makeStyles(theme => ({
+  root: {
+    flexGrow: 1,
+  },
     card: {
       minWidth: 275,
     },
@@ -46,6 +52,11 @@ const useStyles = makeStyles(theme => ({
         background: 'linear-gradient(to right, #336600 37%, #336699 120%)',
 
     },
+    paper: {
+      padding: theme.spacing(9),
+      textAlign: 'center',
+      color: theme.palette.text.secondary,
+    },
   }));
   const theme = createMuiTheme({
     palette: {
@@ -70,7 +81,7 @@ const useStyles = makeStyles(theme => ({
         
       },
       button2:{
-        marginTop: 60,
+        marginTop: -250,
         marginLeft: 120,
         paddingRight: 25,
         
@@ -105,51 +116,47 @@ const useStyles = makeStyles(theme => ({
             
         <form noValidate>
             
-            <GridContainer>
-            <GridItem xs={12} sm={12} md={6}>
-          <TextField
-            variant="outlined"
-            margin="normal"
-            required
-            fullWidth
-            //id="email"
-            multiline
-            rows="10"
-            label=""
-            name=""
-            autoComplete=""
-            autoFocus
-          />
-          </GridItem>
-          <GridItem xs={12} sm={12} md={6}>
+        <div style={{ width: '100%' }}>
+      <Box display="flex" p={1} bgcolor="background.paper">
+        <Box p={1} flexGrow={1} >
+        <Paper className={classes.paper}></Paper>
+        </Box>
+         
+        
+        <Box p={1} >
+
           <Button
             type="submit"
-            style ={theme.button1}
+           // style ={theme.button1}
             variant="contained"
-            color="primary"
+           
             className={classes.button}
           >
             Capture
             
           </Button> 
+          </Box>
+          </Box>
+          </div>
+          <Box display="flex" justifyContent="flex-end" m={0} p={1} bgcolor="background.paper">
+          <Box p={1}>
           <Button
             type="submit"
-            style ={theme.button2}
+           style ={theme.button2}
             variant="contained"
-            color="primary"
+            
             className={classes.button}
 
           >
             Cancel
             
           </Button>  
-          </GridItem>
-         
-          </GridContainer>
+          </Box>
+          </Box>
           
           <div>
-          <GridContainer spacing={3}>
-            <GridItem xs={12} sm={6} md={6}>
+          <Grid container spacing={1}>
+            <Grid item xs={4} sm={6} md={6}>
           <Button
             type="submit"
             
@@ -160,12 +167,12 @@ const useStyles = makeStyles(theme => ({
             <Link style={linkStyle} to="/checkin">Previous</Link>
             
           </Button>
-          </GridItem>
+          </Grid>
           
-            <GridItem xs={12} sm={6} md={6}>
+            <Grid item xs={4} sm={6} md={6}>
           <Button
             type="submit"
-            style ={theme.button3}
+            //style ={theme.button3}
             variant="outlined"
             color="primary"
             
@@ -173,8 +180,8 @@ const useStyles = makeStyles(theme => ({
             <Link style={linkStyle} to="/selecthost">Next</Link>
             
           </Button>
-          </GridItem>
-          </GridContainer>
+          </Grid>
+          </Grid>
              </div>
         </form>
         
