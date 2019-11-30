@@ -138,7 +138,10 @@ const useStyles = makeStyles(theme => ({
           </Box>
           </Box>
           </div>
-          <Box display="flex" justifyContent="flex-end" m={1} p={1} bgcolor="background.paper">
+          <Box display="flex" p={1} bgcolor="background.paper">
+        <Box p={1} flexGrow={1} >
+
+        </Box>
           <Box p={1}>
           <Button
             type="submit"
