@@ -170,8 +170,8 @@ const useStyles = makeStyles(theme => ({
           </GridContainer>
           
           <div>
-          <Grid container spacing={3}>
-            <Grid item xs={4} sm={6} md={6}>
+          <Grid container spacing={5}>
+            <Grid item xs={12} sm={12} md={6}>
           <Button
             type="submit"
             
@@ -202,9 +202,7 @@ const useStyles = makeStyles(theme => ({
         
         </div>
             
-          <Box mt={8}>
-       
-       </Box>
+          
      </Container>
      </AppForm>
         </MuiThemeProvider> 
