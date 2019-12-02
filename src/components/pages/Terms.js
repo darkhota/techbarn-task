@@ -141,7 +141,7 @@ const useStyles = makeStyles(theme => ({
             <Grid item xs={12} sm={12} md={6}>
           <Button
             type="submit"
-            style ={theme.button2}
+            //style ={theme.button2}
             variant="contained"
             color="primary"
             className={classes.button}
