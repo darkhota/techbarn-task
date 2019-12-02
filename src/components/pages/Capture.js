@@ -117,14 +117,14 @@ const useStyles = makeStyles(theme => ({
         <form noValidate>
             
         <div style={{ width: '100%' }}>
-      <Box display="flex" p={1} bgcolor="background.paper">
-        <Box p={1} flexGrow={1} >
+      <Grid container spacing={5}>
+        <Grid item xs={6} sm={6} md={6}>
         <Paper className={classes.paper}></Paper>
-        </Box>
-         
+      
+         </Grid>
         
-        <Box p={1} >
-
+        
+        <Grid item xs={6} sm={6} md={6}>
           <Button
             type="submit"
            // style ={theme.button1}
@@ -135,14 +135,15 @@ const useStyles = makeStyles(theme => ({
             Capture
             
           </Button> 
-          </Box>
-          </Box>
-          </div>
-          <Box display="flex" p={1} bgcolor="background.paper">
-        <Box p={1} flexGrow={1} >
+         </Grid>
+         <Grid item xs={6} sm={6} md={6}>
 
-        </Box>
-          <Box p={1}>
+         </Grid>
+         <Grid item xs={6} sm={6} md={6}>
+          
+          
+
+       
           <Button
             type="submit"
          style ={theme.button2}
@@ -154,8 +155,9 @@ const useStyles = makeStyles(theme => ({
             Cancel
             
           </Button>  
-          </Box>
-          </Box>
+          </Grid>
+          </Grid>
+          </div>
           
           <div>
           <Grid container spacing={5}>
