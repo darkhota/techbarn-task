@@ -12,6 +12,7 @@ import { Link } from 'react-router-dom';
 import useMediaQuery from '@material-ui/core/useMediaQuery';
 import Box from '@material-ui/core/Box';
 
+
 const linkStyle = {
     color: '#fff',
     textDecoration: 'none'
@@ -69,8 +70,8 @@ export default function LandingPage () {
     <MuiThemeProvider theme={theme}>
     <div >
 <Container fixed>
-<GridContainer>
-            <GridItem xs={12} sm={12} md={6}>
+<Grid container wrap="nowrap" spacing={2}>
+            <Grid item xs={6} sm={6} md={6}>
             <Typography component="div" style ={theme.text}  variant="h1" color = "textPrimary">
             
             
@@ -84,9 +85,9 @@ financial services through our specialized subsidiaries
 </Typography>
 <Button variant="contained" color="secondary" className={classes.button}>
 <Link style={linkStyle} to="/checkin"> CHECK IN</Link></Button>
-</GridItem>
+</Grid>
 
-</GridContainer>
+</Grid>
 </Container>
 </div>
 </MuiThemeProvider>
