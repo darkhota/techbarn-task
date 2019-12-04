@@ -184,7 +184,7 @@ const useStyles = makeStyles(theme => ({
           </Button>
           </Grid>
           
-            <Grid item xs={4} sm={6} md={6}>
+            <Grid item xs={12} sm={12} md={6}>
           <Button
             type="submit"
             

@@ -9,24 +9,7 @@ import SelectHost from './components/pages/SelectHost';
 import Terms from './components/pages/Terms';
 //import Background from './views/robot2.jpg';
 
-const styles = theme => ({
-	"@global": {
-		body: {
-			backgroundImage: "url('/views/robot.jpg')",
-			backgroundRepeat: "no-repeat",
-			backgroundPosition: "center center",
-			backgroundSize: "cover",
-			backgroundAttachment: "fixed",
-			height: "100%"
-		},
-		html: {
-			height: "100%"
-		},
-		"#componentWithId": {
-			height: "100%"
-		}
-	}
-});
+
 const useStyles = makeStyles(theme => ({
   mainFeaturedPost: {
     position: 'relative',
@@ -37,21 +20,18 @@ const useStyles = makeStyles(theme => ({
     backgroundSize: 'cover',
     backgroundRepeat: 'no-repeat',
     backgroundPosition: 'center',
+    height:'100vh'
+    //backgroundAttachment: "fixed",
   },
 }));
 function App() {
   const classes = useStyles();
   return (
+    
     <Router>
+      <container>
       <div className={classes.mainFeaturedPost} >
-      {
-              <img
-                style={{ display: 'none' }}
-                src="./views/robot2.jpg"
-                alt="background"
-              />
-            }
-      <header className="App-header">
+    
       <Route exact path = "/" render={props => (
      <React.Fragment><LandingPage />
      </React.Fragment>)}/>
@@ -62,9 +42,11 @@ function App() {
      <Route path = "/terms" component={Terms} />
     
        
-      </header>
+      
     </div>
+    </container>
     </Router>
+
   );
 }
 
