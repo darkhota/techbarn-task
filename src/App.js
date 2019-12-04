@@ -20,8 +20,10 @@ const useStyles = makeStyles(theme => ({
     backgroundSize: 'cover',
     backgroundRepeat: 'no-repeat',
     backgroundPosition: 'center',
-    height:'100vh'
+    height:'100vh',
     //backgroundAttachment: "fixed",
+    overflowX : 'hidden',
+    OverflowY : 'scroll',
   },
 }));
 function App() {
@@ -29,7 +31,7 @@ function App() {
   return (
     
     <Router>
-      <container>
+      
       <div className={classes.mainFeaturedPost} >
     
       <Route exact path = "/" render={props => (
@@ -44,7 +46,7 @@ function App() {
        
       
     </div>
-    </container>
+   
     </Router>
 
   );

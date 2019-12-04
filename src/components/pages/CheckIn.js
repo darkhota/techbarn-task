@@ -81,7 +81,7 @@ const useStyles = makeStyles(theme => ({
         <form noValidate>
             
             <GridContainer>
-            <GridItem xs={12} sm={12} md={6}>
+            <GridItem xs={12} sm={12} md={6} lg ={6} xl = {6}>
           <TextField
             variant="outlined"
             margin="normal"
@@ -94,7 +94,7 @@ const useStyles = makeStyles(theme => ({
             autoFocus
           />
           </GridItem>
-          <GridItem xs={12} sm={12} md={6}>
+          <GridItem xs={12} sm={12} md={6} lg ={6} xl = {6}>
            <TextField
             variant="outlined"
             margin="normal"
@@ -107,7 +107,7 @@ const useStyles = makeStyles(theme => ({
             autoFocus
           />
           </GridItem>
-          <GridItem xs={12} sm={12} md={6}>
+          <GridItem xs={12} sm={12} md={6} lg ={6} xl = {6}>
            <TextField
             variant="outlined"
             margin="normal"
@@ -123,7 +123,7 @@ const useStyles = makeStyles(theme => ({
           
           
           
-            <GridItem xs={12} sm={12} md={6}>
+            <GridItem xs={12} sm={12} md={6} lg ={6} xl = {6}>
            <TextField
             variant="outlined"
             margin="normal"
@@ -137,7 +137,7 @@ const useStyles = makeStyles(theme => ({
           />
           </GridItem>
           
-            <GridItem xs={12} sm={12} md={6}>
+            <GridItem xs={12} sm={12} md={6} lg ={6} xl = {6}>
            <TextField
             variant="outlined"
             margin="normal"
@@ -151,7 +151,7 @@ const useStyles = makeStyles(theme => ({
           />
           </GridItem>
           
-            <GridItem xs={12} sm={12} md={6}>
+            <GridItem xs={12} sm={12} md={6} lg ={6} xl = {6}>
            <TextField
             variant="outlined"
             margin="normal"

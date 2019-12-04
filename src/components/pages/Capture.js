@@ -136,10 +136,10 @@ const useStyles = makeStyles(theme => ({
             
           </Button> 
          </Grid>
-         <Grid item xs={6} sm={6} md={6}>
+         <Grid item xs={6} sm={6} md={6} lg ={6} xl = {6}>
 
          </Grid>
-         <Grid item xs={6} sm={6} md={6}>
+         <Grid item xs={6} sm={6} md={6} lg ={6} xl = {6}>
           
           
 
@@ -161,7 +161,7 @@ const useStyles = makeStyles(theme => ({
           
           <div>
           <Grid container spacing={5}>
-            <Grid item xs={12} sm={12} md={6}>
+            <Grid item xs={6} sm={6} md={6} lg ={6} xl = {6}>
           <Button
             type="submit"
             
@@ -174,7 +174,7 @@ const useStyles = makeStyles(theme => ({
           </Button>
           </Grid>
           
-            <Grid item xs={12} sm={12} md={6}>
+            <Grid item xs={6} sm={6} md={6} lg ={6} xl = {6}>
           <Button
             type="submit"
             //style ={theme.button3}
