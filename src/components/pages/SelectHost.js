@@ -104,7 +104,7 @@ const useStyles = makeStyles(theme => ({
             label="Select Employee"
             name="employee"
             autoComplete="employee"
-            autoFocus
+           
             value={currency}
             onChange={handleChange}
             SelectProps={{
@@ -132,7 +132,7 @@ const useStyles = makeStyles(theme => ({
             label="select purpose of visit"
             name="purpose of visit"
             autoComplete="Purpose of visit"
-            autoFocus
+           
             value={currency}
             onChange={handleChange}
             SelectProps={{
@@ -163,7 +163,7 @@ const useStyles = makeStyles(theme => ({
             multiline
             rows="4"
             autoComplete="Phone no"
-            autoFocus
+            
            />
           </GridItem>
          

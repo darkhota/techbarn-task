@@ -11,11 +11,15 @@ import CssBaseline from '@material-ui/core/CssBaseline';
 import TextField from '@material-ui/core/TextField';
 import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
 import Box from '@material-ui/core/Box';
+import IconButton from '@material-ui/core/IconButton';
+import PhotoCamera from '@material-ui/icons/PhotoCamera';
 import GridContainer from "../styling/GridContainer.js";
 import GridItem from "../styling/Griditem";
 import { Link } from 'react-router-dom';
 import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
+import CancelIcon from '@material-ui/icons/Cancel';
+
 
 const linkStyle = {
     color: '#2e7d32',
@@ -24,6 +28,9 @@ const linkStyle = {
 const useStyles = makeStyles(theme => ({
   root: {
     flexGrow: 1,
+  },
+  input: {
+    display: 'none',
   },
     card: {
       minWidth: 275,
@@ -125,16 +132,12 @@ const useStyles = makeStyles(theme => ({
         
         
         <Grid item xs={6} sm={6} md={6}>
-          <Button
-            type="submit"
-           // style ={theme.button1}
-            variant="contained"
-           
-            className={classes.button}
-          >
-            Capture
-            
-          </Button> 
+        <input accept="image/*" className={classes.input} id="icon-button-file" type="file" />
+      <label htmlFor="icon-button-file">
+        <IconButton color="primary" aria-label="upload picture" component="span">
+          <PhotoCamera />
+        </IconButton>
+      </label>
          </Grid>
          <Grid item xs={6} sm={6} md={6} lg ={6} xl = {6}>
 
@@ -144,17 +147,9 @@ const useStyles = makeStyles(theme => ({
           
 
        
-          <Button
-            type="submit"
-         style ={theme.button2}
-            variant="contained"
-            
-            className={classes.button}
-
-          >
-            Cancel
-            
-          </Button>  
+       <IconButton aria-label="cancel" style ={theme.button2}>
+        <CancelIcon />
+      </IconButton> 
           </Grid>
           </Grid>
           </div>

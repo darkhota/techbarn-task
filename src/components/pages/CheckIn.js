@@ -88,23 +88,10 @@ const useStyles = makeStyles(theme => ({
             required
             fullWidth
             //id="email"
-            label="Phone Number"
-            name="Phone No"
-            autoComplete="Phone no"
-            autoFocus
-          />
-          </GridItem>
-          <GridItem xs={12} sm={12} md={6} lg ={6} xl = {6}>
-           <TextField
-            variant="outlined"
-            margin="normal"
-            required
-            fullWidth
-            //id="email"
             label="First Name"
             name="First Name"
             autoComplete="First Name"
-            autoFocus
+            
           />
           </GridItem>
           <GridItem xs={12} sm={12} md={6} lg ={6} xl = {6}>
@@ -117,7 +104,20 @@ const useStyles = makeStyles(theme => ({
             label="Last Name"
             name="Last Name"
             autoComplete="Last Name"
-            autoFocus
+           
+          />
+          </GridItem>
+          <GridItem xs={12} sm={12} md={6} lg ={6} xl = {6}>
+           <TextField
+            variant="outlined"
+            margin="normal"
+            required
+            fullWidth
+            //id="email"
+            label="Phone Number"
+            name="Phone Number"
+            autoComplete="Phone Number"
+            
           />
           </GridItem>
           
@@ -133,7 +133,7 @@ const useStyles = makeStyles(theme => ({
             label="Select Employee"
             name="email"
             autoComplete="email"
-            autoFocus
+            
           />
           </GridItem>
           
@@ -147,11 +147,11 @@ const useStyles = makeStyles(theme => ({
             label="Company"
             name="email"
             autoComplete="email"
-            autoFocus
+            
           />
           </GridItem>
           
-            <GridItem xs={12} sm={12} md={6} lg ={6} xl = {6}>
+            <GridItem xs={12} sm={12} md={12} lg ={12} xl = {12}>
            <TextField
             variant="outlined"
             margin="normal"
@@ -162,8 +162,8 @@ const useStyles = makeStyles(theme => ({
           rows="4"
             label="Comments"
             name="email"
-            autoComplete="email"
-            autoFocus
+            
+           
           />
           </GridItem>
           </GridContainer>

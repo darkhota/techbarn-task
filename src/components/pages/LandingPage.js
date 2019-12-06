@@ -48,9 +48,9 @@ const theme = createMuiTheme({
        
       },
       text2:{
-        marginTop: 0,
+        marginTop: -70,
         marginBottom: 30,
-        fontSize: 12,
+        fontSize: 16,
       },
   
       
